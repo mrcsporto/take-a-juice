@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+@font-face {
+    font-family:"NimbusLight";
+    src: url("font/NimbusSanDLig.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"NimbusNormal";
+    src: url("font/NimbusSanTExt.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"NimbusBold";
+    src: url("font/NimbusSanTBlaExt.ttf") format("truetype");
+}
+
+
+body {
+    font-family: 'NimbusLight';
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+header {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+
+    font-family: 'NimbusNormal';
+    
+    background-color: #F26F21;
+    
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    height: 5rem;
+    background-color: #FECE44;
+    z-index: 9997;
+
+    transition: 0.55s;
+}
+
+
+.logo {
+    transition: 0.45s; 
+}
+
+.side-menu {
+    display: flex;
+    align-self: center;
+    font-family:"NimbusNormal";
+}
+
+
+a.lojas,
+a.delivery,
+a.cardapio {
+    position: relative;
+    text-decoration: none;
+    padding: 0 1rem 0 1rem;
+    color: #F26F21;
+    cursor: pointer;
+
+}
+
+a.lojas::before, a.delivery::before, a.cardapio::before{
+    content: '';
+    position: absolute;
+    width: 71%;
+    height: 30%;
+    background-color: #F7A600;
+    /* border-radius: 0.5rem; */
+    z-index: -1;
+    opacity: 50%;
+    left: 15%;
+    bottom: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in;
+}
+
+
+a.lojas:hover::before,a.delivery:hover::before, a.cardapio:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+
+section {
+    padding: 2rem 0 2rem 0;
+}
+
+h1 {
+    font-size: 2rem;
+
+    
+}
+
+h1.title { 
+    font-family:"NimbusBold";
+    text-align: center;
+    letter-spacing: 0.08rem;
+
+    padding: 2rem;
+    
+    color: #F26F21;
+}
+
+.banner {
+    background-image:url(images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0.5px 0.5px 20px #aaa;
+
+    width: 100vw;
+    height: 35em;
+    margin-bottom: 2rem;
+}
+
+
+
+.container {    
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.hero {
+
+    width: 60%;
+    margin: auto;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    font-family:"NimbusBold";
+    font-size: 1.25rem;
+    letter-spacing: 0.08rem;
+
+}
+
+.hero-span {
+    background-color: #E63212;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    overflow-wrap: break-word;
+    width:fit-content;
+    height:fit-content;
+}
+
+
+/* .intro p {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-family:"NimbusLight";
+} */
+
+.intro .cta {
+    margin: 2rem 0;
+}
+
+.button {
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+    font-family:"NimbusLight";
+    font-size: 1.25rem;
+}
+
+.primary {
+    background-color: #F26F21;
+    color: white;
+}
+
+.primary:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+    filter: brightness(120%);
+    }
+
+
+/* .secondary {
+    background-color: white;
+    color: #F26F21;
+}
+
+.secondary:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+    filter: brightness(120%);
+} */
+
+
+.cardapio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comidas img {
+    max-width: 100%;
+    width:20rem;
+    height: 100%;
+    object-fit:cover;
+    border: 1px solid #E63212;
+    box-shadow: 1px 1px 10px #aaa;
+}
+
+
+.comidas:hover{
+    transition: ease 250ms;
+    opacity:0.75;
+    cursor: pointer;
+
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    font-family:"NimbusBold";
+    font-size: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1.7rem;
+
+    max-width: 100%;
+    width: 25rem;
+    height: 25rem;
+    
+       
+ }
+
+ .card:hover {
+    transition: ease 250ms;
+    opacity:0.5;
+    cursor: pointer;
+ }
+
+.card.red {
+    background-color: #9BAE40;
+}
+.card.blue {
+    background-color: #FBBB21;
+}
+
+.card-lojas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loja img {
+    max-width: 100%;
+    width: 15rem;
+    height: 80%;
+    object-fit:cover;
+    border: 2px solid #F26F21;
+    box-shadow: 0.25px 0.25px 10px #aaa;
+    border-radius: 50%;   
+}
+
+.loja:hover{
+    transition: ease 250ms;
+    opacity:0.75;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #F26F21;
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-evenly;
+
+    padding-top: 2rem;
+    list-style-type: none;    
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p.copyright {
+    padding: 2rem;
+    margin: auto;
+    text-align: center;
+    color: #ffffffdd;
+}
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: smooth;
+	}
+}

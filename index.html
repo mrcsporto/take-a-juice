@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/mini-logo.ico">
+    <title>TAKE A JUICE!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header id="header">
+        <div>
+            <!-- <a href="index.html" class="logo" id="logo" alt="logo"></a>
+            <a href="index.html" class="logo" id="logo-laranja" alt="logo-laranja"></a> -->
+            <img src="" class="logo" id="logo">
+            <!-- <img src="" class="logo-laranja" id="logo-laranja">  -->
+        </div>
+        <div class="side-menu">
+            <a href="#cardapio" id="cardapio" class="cardapio">Cardápio</a> 
+            <a href="#delivery" id="delivery" class="delivery" >Delivery</a> 
+            <a href="#lojas" id="lojas" class="lojas">Lojas</a> 
+               
+        </div>
+    </header>
+    <main>
+        <section class="intro banner">
+            <div class="container">
+                <div class="hero">
+                    <h1 class="hero-text"><span class="hero-span">PANINIS SUPER</span><span class="hero-span">DELICIOSOS</span><span class="hero-span">AQUI >></span></h1>
+                    <!-- <p>Confira nossas ofertas do dia no iFood.</p>
+                    
+                    <div class="cta"> 
+                        <a href="#" class="button primary">Delivery</a>
+                        <a href="#" class="button secondary">Contato</a>
+                    </div>   -->
+                </div>
+            </div>
+        </section>
+        <section id="cardapio">
+            <div class="container">
+                <h1 class="title">Cardápio</h1>
+                    <div>
+                        <div class="cardapio" >
+                            <div class="comidas"><img src="images/suco.jpg" alt="Suco"></div>
+                            <div class="comidas"><img src="images/sanduiche.jpg" alt="Sanduiche"></div>
+                            <div class="comidas"><img src="images/salada.jpg" alt="Salada"></div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section id="delivery">
+            <div class="container">
+                <h1 class="title">Delivery</h1>
+                <div class="cards" >
+                    <div class="card red">Delivery</div>
+                    <div class="card blue">Lojas</div>
+                </div>
+            </div>   
+        </section>
+        <section id="card-lojas">
+            <div class="container">
+                <h1 class="title">Lojas</h1>
+                    <div>
+                        <div class="card-lojas" >
+                            <div class="loja"><img src="images/lojas/loja-eusebio.png" alt="Loja Eusébio"></div>
+                            <div class="loja"><img src="images/lojas/loja-iguatemi.png" alt="Loja Iguatemi"></div>
+                            <div class="loja"><img src="images/lojas/loja-sul.png" alt="Loja Sul"></div>
+                            <div class="loja"><img src="images/lojas/loja-varjota.png" alt="Loja Varjota"></div>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="#">Política de privacidade</a></li>
+                <li><a href="#">Instagrem</a></li>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+            <p class="copyright">Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    document.getElementById("logo").src = "/images/logo-laranja.png"
+    document.getElementById("logo").style.height = "5rem";
+
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 90) {
+        document.getElementById("header").style.height = "3rem";
+        document.getElementById("header").style.fontSize = "1rem";
+        document.getElementById("logo").style.height = "3rem";
+        
+        document.getElementById("header").style.backgroundColor = "#F26F21";
+        document.getElementById("cardapio").style.color = "#fff";
+        document.getElementById("delivery").style.color = "#fff";
+        document.getElementById("lojas").style.color = "#fff";
+        document.getElementById("logo").src = "/images/logo.png"
+    
+    } else {
+        document.getElementById("header").style.height = "6rem";
+        document.getElementById("header").style.fontSize = "1.2rem";
+        document.getElementById("logo").style.height = "5rem";
+
+        document.getElementById("header").style.backgroundColor = "#FECE44";
+        document.getElementById("cardapio").style.color = "#F26F21";
+        document.getElementById("delivery").style.color = "#F26F21";
+        document.getElementById("lojas").style.color = "#F26F21";
+        document.getElementById("logo").src = "/images/logo-laranja.png"
+   
+    }
+}
+</script>
+
+</html>
